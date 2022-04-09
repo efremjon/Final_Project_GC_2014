@@ -2,46 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-    <title>BGI Ethiopia</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-  
-    <!-- Favicons -->
-    <link href="{% static 'assets/img/logo2.png' %}" rel="icon">
-    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-  
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
-  
-    <!-- Template Main CSS File -->
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-  
-    <!-- =======================================================
-    * Template Name: NiceAdmin - v2.2.2
-    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+ <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+        <title>BGI Ethiopia</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+      
+        <!-- Favicons -->
+        <link href="{% static 'assets/img/logo2.png' %}" rel="icon">
+        <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+      
+        <!-- Google Fonts -->
+        <link href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+      
+        <!-- Template Main CSS File -->
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+      
+        <!-- =======================================================
+        * Template Name: NiceAdmin - v2.2.2
+        * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
   </head>
-  
+
 <body>
-  
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="admin.html" class="logo d-flex align-items-center">
@@ -340,120 +340,164 @@
 
   </aside><!-- End Sidebar-->
 
-
+  <!-- ====== Main -->
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Manage Agents</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="admin.html">Home</a></li>
-          <li class="breadcrumb-item">Manage Agents</li>
-          <li class="breadcrumb-item active">Add Agent</li>
+          <li class="breadcrumb-item active">View Agents</li>
         </ol>
+        <div class="text-end">
+            <a href="add-agent.html" class="item-end">
+                <button type="button" class="btn btn-sm rounded-pill btn-secondary"><i class="bi bi-plus me-1"></i>Add Agent</button>
+              </a>
+        </div>
+        
       </nav>
+      
     </div><!-- End Page Title -->
 
-      <section class="section add-agent">
+    <section class="section">
         <div class="row">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 d-flex flex-column align-items-center justify-content-center">
-              <div class="card mb-5">
-                <div class="card-body">         
-                    <h5 class="card-title text-center pb-0 fs-4 text-warning">Agent Registration form</h5>
-                  <form class="row g-3 needs-validation" novalidate>
-                    
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentsfullname" class="form-label">Full Name</label>
-                        <input type="text" name="agentFullname" class="form-control" id="agentFullname" required>
-                        <div class="invalid-feedback">Please, enter agent's full name!</div>
-                      </div>
+          <div class="col-lg-12">  
+            <div class="card">
+              <div class="card-body">
+                <!-- Table with stripped rows -->
+                <table class="table datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Agent</th>
+                      <th scope="col">Region</th>
+                      <th scope="col">Area</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mesfin Alemu</td>
+                      <td>Western</td>
+                      <td>Jimma</td>
+                      <td>0914336677</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>G/Egziabher G/Selassie</td>
+                      <td>Central</td>
+                      <td>Adama</td>
+                      <td>0945789544</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Legese Getachew</td>
+                      <td>North Eastern</td>
+                      <td>Semera</td>
+                      <td>0984229653</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Gosa Zenebe</td>
+                      <td>Southern</td>
+                      <td>Awasa</td>
+                      <td>0972118876</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Mikiyas Gashaw</td>
+                      <td>Northern</td>
+                      <td>Gondar</td>
+                      <td>0912551111</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Gosa Zenebe</td>
+                        <td>Southern</td>
+                        <td>Awasa</td>
+                        <td>0972118876</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Mikiyas Gashaw</td>
+                        <td>Northern</td>
+                        <td>Gondar</td>
+                        <td>0912551111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>Dagne Tamrat</td>
+                        <td>Southern</td>
+                        <td>Shashemane</td>
+                        <td>0972118876</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>Mikiyas Gashaw</td>
+                        <td>Northern</td>
+                        <td>Gondar</td>
+                        <td>0912551111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>Zemedkun Taye</td>
+                        <td>Southern</td>
+                        <td>Wolayta</td>
+                        <td>0972118876</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">11</th>
+                        <td>Mikiyas Gashaw</td>
+                        <td>Northern</td>
+                        <td>Gondar</td>
+                        <td>0912551111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">12</th>
+                        <td>Gosa Zenebe</td>
+                        <td>Southern</td>
+                        <td>Awasa</td>
+                        <td>0972118876</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">13</th>
+                        <td>Mikiyas Gashaw</td>
+                        <td>Northern</td>
+                        <td>Gondar</td>
+                        <td>0912551111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">14</th>
+                        <td>Gosa Zenebe</td>
+                        <td>Southern</td>
+                        <td>Awasa</td>
+                        <td>0972118876</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">15</th>
+                        <td>Mikiyas Gashaw</td>
+                        <td>Northern</td>
+                        <td>Gondar</td>
+                        <td>0912551111</td>
+                      </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
   
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentusername" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                          <span class="input-group-text" id="inputGroupPrepend">@</span>
-                          <input type="text" name="agentUsername" class="form-control" id="agentUsername" required>
-                          <div class="invalid-feedback">Please choose a username.</div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="Email" class="form-label">Email</label>
-                        <input type="email" name="agentEmail" class="form-control" id="agentEmail" required>
-                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentpassword" class="form-label">Password</label>
-                        <input type="password" name="agentPassword" class="form-control" id="agentPassword" required>
-                        <div class="invalid-feedback">Please enter password!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentphone" class="form-label">Phone</label>
-                        <input type="tel" name="agentPhone" class="form-control" id="agentPhone" required>
-                        <div class="invalid-feedback">Please enter Phone!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="confirmpassword" class="form-label">Confirm Password</label>
-                        <input type="password" name="agentPassword" class="form-control" id="agentPassword" required>
-                        <div class="invalid-feedback">Please confirm password!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentregion" class="form-label">Region</label>
-                        <select class="form-select" id="agentRegion" >
-                          <option value="1">Central</option>
-                          <option value="2">Eastern</option>
-                          <option value="3">Northern</option>
-                          <option value="4">Addis Ababa</option>
-                          <option value="5">Western</option>
-                          <option value="6">North Eastern</option>
-                          <option value="7">Southern</option>
-                          <option value="8">South Western</option>
-                        </select>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentlicence" class="form-label">Licence</label>
-                        <input type="file" name="agentLicence" class="form-control" id="agentLicence" required>
-                        <div class="invalid-feedback">Please upload agent's licence!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentarea" class="form-label">Area</label>
-                        <input type="text" name="agentArea" class="form-control" id="agentArea" required>
-                        <div class="invalid-feedback">Please enter area!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agentTINnumber" class="form-label">TIN Number</label>
-                        <input type="text" name="agentTINnumber" class="form-control" id="agentTINnumber" required>
-                        <div class="invalid-feedback">Please enter TIN number!</div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="agreementpaper" class="form-label">Agreement Paper</label>
-                        <input type="file" name="agreementPaper" class="form-control" id="agreementPaper" required>
-                        <div class="invalid-feedback">Please upload the agreement paper!</div>
-                      </div>
-
-                      <div class="col-4">
-                        <button class="btn btn-warning w-100" type="submit">Add</button>
-                      </div>
-                  </form>
-                </div>
               </div>
             </div>
+  
           </div>
         </div>
       </section>
+  
 
   </main><!-- End #main -->
 
-   <!-- ======= Footer ======= -->
-   <footer id="footer" class="footer">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>BGI Ethiopia</span></strong>. All Rights Reserved
     </div>

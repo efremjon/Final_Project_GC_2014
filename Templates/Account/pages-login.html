@@ -56,7 +56,8 @@
                       <img src="{% static 'assets/img/logo3.png' %}" alt="">
                     </a>
                   </div><!-- End Logo -->
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" novalidate method="POST" action="">
+                    {% csrf_token %}
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
@@ -88,8 +89,10 @@
                   </form>
 
                 </div>
+             
               </div>
             </div>
+         
           </div>
         </div>
 

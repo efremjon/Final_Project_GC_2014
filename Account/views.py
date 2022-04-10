@@ -4,22 +4,31 @@ from django.contrib.auth.models import User,Group
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 # Create your views here.
-def login_page(request):
+def login_view(request):
+    
     if request.method == 'POST':
         username=request.POST['username']
         password=request.POST['password']
         user = authenticate(username=username,password=password)
-        a=user.groups.all()[0].name
-        if a == 'Admin':
-            login(request,user)
-            return HttpResponseRedirect(reverse('admin_dashbord',))
-        elif a == 'Agent':
-            login(request,user)
-            return HttpResponseRedirect(reverse('agent_dashbord'))
-        elif a == 'Customer':
-            login(request,user)
-            return redirect('customer_page')
-    return render(request,'Account/pages-login.html',{})
+        if user.groups.exists():
+            a=user.groups.all()[0].name
+            if a == 'Admin':
+                login(request,user)
+                return redirect('admin_dashbord',)
+            elif a == 'Agent':
+                login(request,user)
+                return redirect('agent_dashbord')
+            elif a == 'Customer':
+                login(request,user)
+                return redirect('Customer_dashbord')
+        else:
+            return render(request,'Account/pages-login.html')
+    return render(request,'Account/pages-login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
+
 
 def register_view(request):
     if request.method == 'POST':
